@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JogueEP - Escolha de Personagem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela inicial -->
+    <div id="menu" class="center-box">
+        <div class="welcome-box">
+            <h1 class="titulo">                      </h1>
+            <button id="playBtn" class="main-btn">Jogar</button>
+        </div>
+    </div>
+</body>
+<body1>
+    <!-- Tela de seleção de número de jogadores -->
+    <div id="playerSelection" class="center-box" style="display: none;">
+        <h2>Quantos jogadores irão participar?</h2>
+        <div id="playersContainer" class="button-group">
+            <button class="player-btn" data-players="2">2 Jogadores</button>
+            <button class="player-btn" data-players="3">3 Jogadores</button>
+            <button class="player-btn" data-players="4">4 Jogadores</button>
+            <button class="player-btn" data-players="5">5 Jogadores</button>
+        </div>
+        <button id="confirmPlayers" class="main-btn" style="display: none;">Confirmar</button>
+    </div>
+
+    <!-- Tela de seleção de curso -->
+    <div id="courseSelection" class="center-box" style="display: none;">
+        <h2 id="playerTitle">Escolha o curso para o Jogador 1</h2>
+        <div id="coursesContainer" class="option-container">
+            <div class="course-option">
+                <img src="administracao.png" alt="Administração" class="course-img" data-course="Administração">
+                <p>      </p>
+            </div>
+            <div class="course-option">
+                <img src="aquicultura.png" alt="Aquicultura" class="course-img" data-course="Aquicultura">
+                <p>      </p>
+            </div>
+            <div class="course-option">
+                <img src="eletromecanica.png" alt="Eletromecânica" class="course-img" data-course="Eletromecânica">
+                <p>      </p>
+            </div>
+            <div class="course-option">
+                <img src="massoterapia.png" alt="Massoterapia" class="course-img" data-course="Massoterapia">
+                <p>      </p>
+            </div>
+            <div class="course-option">
+                <img src="redes.png" alt="Redes de Computadores" class="course-img" data-course="Redes de Computadores">
+                <p>      </p>
+            </div>
+        </div>
+        <button id="confirmCourse" class="main-btn" style="display: none;">Próximo</button>
+    </div>
+
+    <!-- Tela de seleção de competências -->
+    <div id="skillSelection" class="center-box" style="display: none;">
+        <h2 id="skillTitle">Escolha a competência do Jogador 1</h2>
+        <div id="skillsContainer" class="option-container">
+            <div class="skill-option">
+                <img src="autogestao.png" alt="Autogestão" class="skill-img" data-skill="Autogestão">
+                 <!-- <p>Autogestão: Capacidade de gerenciar suas emoções e comportamentos.</p>-->
+            </div>
+            <div class="skill-option">
+                <img src="engajamento.png" alt="Engajamento com o Outro" class="skill-img" data-skill="Engajamento com o Outro">
+                <!--<p>Engajamento: Colaborar e construir relacionamentos fortes.</p>-->
+            </div>
+            <div class="skill-option">
+                <img src="amabilidade.png" alt="Amabilidade" class="skill-img" data-skill="Amabilidade">
+                <!--<p>Amabilidade: Ação de ser gentil e compassivo com os outros.</p>-->
+            </div>
+            <div class="skill-option">
+                <img src="resiliencia.png" alt="Resiliência Emocional" class="skill-img" data-skill="Resiliência Emocional">
+               <!-- <p>Resiliência: Capacidade de se adaptar e superar adversidades.</p>-->
+            </div>
+            <div class="skill-option"> 
+                <img src="abertura.png" alt="Abertura ao Novo" class="skill-img" data-skill="Abertura ao Novo">
+               <!-- <p>Abertura: Disposição para explorar novas ideias e experiências.</p>-->
+            </div>
+        </div>
+        <button id="confirmSkill" class="main-btn" style="display: none;">Próximo</button>
+    </div>
+</body1>
+<body2>
+    <!-- Tela do jogo -->
+    <div id="game" style="display: none;">
+        <div class="testemanipulaçao"></div> <!-- Tela do jogo manipulado -->
+        <div class="jogo-container">
+            <header>
+                <h1>JogueEP</h1>
+                <div class="info-jogo">
+                    <div class="rodadas">Rodada: <span id="numeroRodadas">1/12</span></div>
+                    <div class="timer">Tempo: <span id="tempo">00:00</span></div>
+                </div>
+                <div class="turno-jogador">
+                    <span id="vezJogador">Vez do Jogador 1</span>
+                </div>
+            </header>
+
+            <div class="mesa">
+                <div class="testemanipulaçao"></div> <!-- Tela do jogo manipulado -->
+                <div class="carta-centro" id="cartaCentro">
+                    <img src="imagens/cartas/verso_baralho.png" alt="Verso do Baralho" id="imagemCarta">
+                </div>
+                <div class="pontuacao">
+                    <h2>Número de Troféus</h2>
+                    <div class="trofeus">
+                        <span>Jogador 1: <span id="trofeuJogador1">0</span></span><br>
+                        <span>Jogador 2: <span id="trofeuJogador2">0</span></span><br>
+                        <span>Jogador 3: <span id="trofeuJogador3">0</span></span><br>
+                        <span>Jogador 4: <span id="trofeuJogador4">0</span></span><br>
+                        <span>Jogador 5: <span id="trofeuJogador5">0</span></span><br>
+                    </div>
+                    <h2>Número de Pontos</h2>
+                    <div class="pontos">
+                        <span>Jogador 1: <span id="pontosJogador1">0</span></span><br>
+                        <span>Jogador 2: <span id="pontosJogador2">0</span></span><br>
+                        <span>Jogador 3: <span id="pontosJogador3">0</span></span><br>
+                        <span>Jogador 4: <span id="pontosJogador4">0</span></span><br>
+                        <span>Jogador 5: <span id="pontosJogador5">0</span></span><br>
+                    </div>
+                </div>
+                <div class="cartas-jogadores">
+                    <div class="deck" id="jogador1" onclick="selecionarCarta(1)">
+                        <img src="jogador1.png" alt="Jogador 1">
+                    </div>
+                    <div class="deck" id="jogador2" onclick="selecionarCarta(2)">
+                        <img src="jogador2.png" alt="Jogador 2">
+                    </div>
+                    <div class="deck" id="jogador3" onclick="selecionarCarta(3)">
+                        <img src="jogador3.png" alt="Jogador 3">
+                    </div>
+                    <div class="deck" id="jogador4" onclick="selecionarCarta(4)">
+                        <img src="jogador4.png" alt="Jogador 4">
+                    </div>
+                    <div class="deck" id="jogador5" onclick="selecionarCarta(5)">
+                        <img src="jogador5.png" alt="Jogador 5">
+                    </div>
+                </div>
+            </div>  
+
+            <footer>
+                <button onclick="jogarDado()">Jogar Dado</button>
+                <button onclick="reiniciarJogo()">Reiniciar</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body2>
+</html>
+
+

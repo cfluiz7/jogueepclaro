@@ -1,0 +1,262 @@
+/* Estilos globais */
+body1 {
+   /* color: rgb(253, 251, 251);*/
+    font-size: 1.5em;
+    margin-bottom: 400px;
+    /*text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;*/
+    background-image: url(capa1b.png); /* Define uma imagem de fundo chamada 'capa1.png' */
+    background-size: cover; /* A imagem cobre toda a área, se ajustando ao tamanho da tela */
+   /* background-position: center; /* Centraliza a imagem no fundo, para que o foco seja o centro */
+    font-family: Arial, sans-serif; /* Define a fonte Arial para todo o texto dentro do body */
+    /*background-color: #f0f0f0; /* Define uma cor de fundo cinza claro como fallback se a imagem não carregar */
+    margin: 0; /* Remove a margem padrão do body */
+    padding: 0; /* Remove o preenchimento padrão do body */
+    display: flex; /* Torna o body um contêiner flexível, para facilitar o posicionamento dos elementos internos */
+    justify-content: center; /* Alinha os itens filhos horizontalmente no centro */
+    align-items: center; /* Alinha os itens filhos verticalmente no centro */
+    height: 50vh; /* Define a altura do body como 100% da altura visível da janela do navegador */
+}
+
+/* Define a fonte padrão e a cor de fundo da página */
+body2 {
+    font-family: 'Arial', sans-serif;
+    background-color: #4bb142ef; /* Cor de fundo */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+} 
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(capab.png);        
+    background-size: cover;
+    background-position: center;
+}
+
+
+body3 { 
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+overflow: hidden; /* Evita rolagem */
+}
+
+testemanipulaçao {
+    background-image: url('testemanipulaçao.png'); /* Caminho da sua imagem */
+    background-size: cover; /* Cobre a tela inteira */
+    background-position: center; /* Centraliza a imagem */
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* Centralizar o conteúdo */
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Tela inicial e seleção */
+.welcome-box, .center-box {
+    text-align: center;
+}
+
+.titulo {
+    color: rgb(14, 0, 0);
+    font-size: 2.5em;
+    margin-bottom: 400px;
+    text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white;
+}
+
+.main-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.main-btn:hover {
+    background-color: #45a049;
+}
+
+.player-btn {
+    margin: 30px;
+    padding: 15px 30px;
+    font-size: 25px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.player-btn:hover {
+    background-color: #0b7dda;
+}
+
+/* Seções de cursos e competências */
+#coursesContainer, #skillsContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.course-option, .skill-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.course-img, .skill-img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.course-img:hover, .skill-img:hover {
+    border-color: #4CAF50;
+}
+
+/*mesas luiz1810
+
+
+
+
+
+
+/* Container principal do jogo */
+.jogo-container {
+    width: 80%; /* Define a largura para 80% da tela */
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #1c6e27; /* Cor de fundo do cabeçalho */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Arredonda os cantos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+/* Estilo das informações do jogo (tempo e rodada) */
+.info-jogo {
+    display: flex; /* Define um layout flexível */
+    justify-content: space-between; /* Distribui os elementos com espaço entre eles */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+/* Estilo da mesa de jogo */
+.mesa {
+    display: flex; /* Define um layout flexível */
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    margin: 20px 0; /* Espaçamento vertical */
+}
+
+/* Estilo para a carta central */
+.carta-centro {
+    width: 300px; /* Largura da carta */
+    height: 400px; /* Altura da carta */
+    background-color: white; /* Cor de fundo da carta */
+    border: 2px solid #333; /* Borda preta */
+    border-radius: 10px; /* Arredonda os cantos */
+    position: relative; /* Define posição relativa para alinhar elementos filhos */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra para dar efeito de profundidade */
+}
+
+/* Estilo para a imagem dentro da carta central */
+.carta-centro img {
+    width: 100%; /* Largura total da carta */
+    height: auto; /* Altura proporcional à largura */
+    border-radius: 10px; /* Arredonda os cantos da imagem */
+}
+
+/* Estilo para a seção de pontuação */
+.pontuacao {
+    background-color: #1c6e27; /* Cor de fundo dourada */
+    border-radius: 10px; /* Arredonda os cantos */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+.pontuacao_trofe {
+    background-color: #1c6e27; /* Cor de fundo dourada */
+    border-radius: 10px; /* Arredonda os cantos */
+    padding: 15px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    width: 40%; /* Largura de 40% do contêiner */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+}
+
+
+/* Estilo para a seção que exibe as cartas dos jogadores */
+.cartas-jogadores {
+    display: flex; /* Define um layout flexível */
+    justify-content: space-around; /* Distribui as cartas uniformemente */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+/* Estilo para cada deck (carta do jogador) */
+.deck {
+    width: 100px; /* Largura do deck */
+    height: 150px; /* Altura do deck */
+    border: 2px solid #333; /* Borda preta */
+    border-radius: 10px; /* Arredonda os cantos */
+    margin: 5px; /* Espaçamento ao redor */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+/* Estilo para a imagem dentro do deck */
+.deck img {
+    width: 100%; /* Largura total do deck */
+    height: auto; /* Altura proporcional à largura */
+}
+
+/* Estilo para o rodapé */
+footer {
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Estilo para os botões */
+button {
+    padding: 10px 15px; /* Espaçamento interno */
+    margin: 5px; /* Espaçamento ao redor */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Arredonda os cantos */
+    border: none; /* Remove a borda padrão */
+    background-color: #28a745; /* Cor de fundo verde */
+    color: white; /* Cor do texto branca */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Animação de transição para a cor de fundo */
+}
+
+/* Estilo ao passar o mouse sobre os botões */
+button:hover {
+    background-color: #218838; /* Muda a cor de fundo para um verde mais escuro */
+}
